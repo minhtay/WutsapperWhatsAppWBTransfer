@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.LsPhotoEditor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/backgroundDark</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/tools_theme</item>
+        <item name="colorOnPrimary">@color/tools_theme</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/tools_theme</item>
+        <item name="colorOnSecondary">@color/tools_theme</item>
+        <!-- Tertiary brand color. -->
+        <item name="colorTertiary">@color/tools_theme</item>
+        <item name="colorOnTertiary">@color/tools_theme</item>
+        <!-- Status bar - navigation bar color. -->
+        <item name="android:statusBarColor">@color/backgroundDark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:navigationBarColor">@color/backgroundDark</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorTertiary">@color/text_tertiary</item>
+    </style>
+</resources>
