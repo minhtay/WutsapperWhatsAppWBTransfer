@@ -17,6 +17,7 @@ import com.wondershare.wutsapper.transfer.R
 import com.wondershare.wutsapper.transfer.databinding.ActivityGuideBackupBinding
 import com.wondershare.wutsapper.transfer.feature.base.BaseActivity
 import com.wondershare.wutsapper.transfer.feature.home.HomeActivity
+import com.wondershare.wutsapper.transfer.feature.user.UserActivity
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -62,6 +63,10 @@ class GuideBackupActivity :
 
         binding.toolbar.btnBack.setOnClickListener {
             onBackPressed()
+        }
+
+        binding.toolbar.btnToolbar.setOnClickListener {
+            UserActivity.startActivity(this)
         }
     }
 

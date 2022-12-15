@@ -27,6 +27,10 @@
     <color name="color_E4E4E4">#E4E4E4</color>
     <color name="color_C9D8FF">#C9D8FF</color>
     <color name="color_EDB663">#EDB663</color>
+    <color name="color_C9DEFF">#C9DEFF</color>
+    <color name="color_2A2A2F">#2A2A2F</color>
+    <color name="color_339199B0">#339199B0</color>
+    <color name="color_9497D6">#9497D6</color>
 
     <color name="trans">@android:color/transparent</color>
 

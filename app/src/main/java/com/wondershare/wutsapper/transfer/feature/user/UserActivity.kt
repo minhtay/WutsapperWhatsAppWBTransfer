@@ -19,7 +19,7 @@ import com.wondershare.wutsapper.transfer.databinding.ActivityUserBinding
 import com.wondershare.wutsapper.transfer.databinding.DialogBuyPremiumBinding
 import com.wondershare.wutsapper.transfer.databinding.DialogRequestBuyPremiumBinding
 import com.wondershare.wutsapper.transfer.feature.user.faqs.FAQsActivity
-import kotlinx.android.synthetic.main.activity_user.*
+import com.wondershare.wutsapper.transfer.feature.user.toolkit.ToolkitActivity
 
 
 class UserActivity : AppCompatActivity() {
@@ -50,12 +50,22 @@ class UserActivity : AppCompatActivity() {
         binding.btnBuyPremium.setOnClickListener {
             dialogBuyPremium().show()
         }
+
+        binding.toolkit.setOnClickListener {
+            ToolkitActivity.startActivity(this)
+        }
+
+        binding.toolbar.btnBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun initView() {
         binding.toolbar.btnToolbar.visibility = View.GONE
 
         binding.txtNameDevice.text = getDeviceName()
+
+        dialogRequestBuyPremium().show()
     }
 
     private fun getDeviceName(): String? {
@@ -66,7 +76,7 @@ class UserActivity : AppCompatActivity() {
         } else "$manufacturer $model"
     }
 
-    fun dialogBuyPremium(): Dialog {
+    private fun dialogRequestBuyPremium(): Dialog {
         val dialog = Dialog(this)
         val dialogBinding: DialogRequestBuyPremiumBinding = DataBindingUtil.inflate(
             LayoutInflater.from(dialog.context),
@@ -90,8 +100,29 @@ class UserActivity : AppCompatActivity() {
                 0
             )
         )
+        return dialog
+    }
 
+    private fun dialogBuyPremium(): Dialog {
+        val dialog = Dialog(this)
+        val dialogBinding: DialogBuyPremiumBinding = DataBindingUtil.inflate(
+            LayoutInflater.from(dialog.context),
+            R.layout.dialog_buy_premium,
+            dialog.findViewById(R.id.view),
+            false
+        )
+        dialog.setContentView(dialogBinding.root)
+        dialog.window!!.setGravity(Gravity.BOTTOM)
+        dialog.window!!.setBackgroundDrawableResource(R.color.trans)
+        dialog.window!!.setLayout(
+            ActionBar.LayoutParams.MATCH_PARENT,
+            ActionBar.LayoutParams.WRAP_CONTENT
+        )
 
         return dialog
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

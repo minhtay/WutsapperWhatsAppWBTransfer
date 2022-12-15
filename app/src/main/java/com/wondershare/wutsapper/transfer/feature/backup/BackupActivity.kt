@@ -3,11 +3,8 @@ package com.wondershare.wutsapper.transfer.feature.backup
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
-import android.view.Window
-import android.view.WindowManager
 import androidx.activity.result.contract.ActivityResultContracts.*
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
@@ -17,8 +14,8 @@ import com.wondershare.wutsapper.transfer.databinding.ActivityBackupBinding
 import com.wondershare.wutsapper.transfer.feature.backup.model.CoutryPhoneDataRCV
 import com.wondershare.wutsapper.transfer.feature.backup.step.Step1Fragment
 import com.wondershare.wutsapper.transfer.feature.backup.step.Step2Fragment
-import com.wondershare.wutsapper.transfer.feature.backup.step.Step3Fragment
 import com.wondershare.wutsapper.transfer.feature.base.BaseActivity
+import com.wondershare.wutsapper.transfer.feature.user.UserActivity
 import kotlinx.android.synthetic.main.activity_coutry_phone.*
 
 class BackupActivity : BaseActivity<ActivityBackupBinding, BackupViewmodel>(), BackupNavigator {
@@ -120,6 +117,10 @@ class BackupActivity : BaseActivity<ActivityBackupBinding, BackupViewmodel>(), B
                 }
             }
         }
+
+        binding.toolbar.btnToolbar.setOnClickListener {
+            UserActivity.startActivity(this)
+        }
     }
 
     private fun refeshStatebar() {
@@ -155,10 +156,7 @@ class BackupActivity : BaseActivity<ActivityBackupBinding, BackupViewmodel>(), B
     }
 
     override fun navigateToScreen(Tag: Int) {
-        when (Tag) {
-            1 -> addFragment(Step2Fragment(), binding.fragmentView.id, "Step2")
-            2 -> addFragment(Step3Fragment(), binding.fragmentView.id, "Step3")
-        }
+        addFragment(Step2Fragment(), binding.fragmentView.id, "Step2")
     }
 
     override fun onBackPressed() {

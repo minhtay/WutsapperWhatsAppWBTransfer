@@ -13,6 +13,7 @@
         android:layout_marginEnd="-5dp"
         android:src="@drawable/ic_sale_35"
         android:translationZ="@dimen/_10sdp"
+        android:elevation="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/cardView"
         tools:ignore="MissingConstraints" />
@@ -42,13 +43,15 @@
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/appCompatCheckBox"
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                android:background="@drawable/bg_checkbox_buy_pre"
+                android:button="@null"/>
 
             <ImageView
                 android:layout_width="@dimen/_40sdp"
@@ -75,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/id_whatsapp"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_18sdp"
+                    android:textSize="@dimen/_16sdp"
                     android:textStyle="bold" />
 
                 <androidx.cardview.widget.CardView
@@ -104,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:text="439,000 ₫"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_26sdp"
+                android:textSize="@dimen/_22sdp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout2"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2"

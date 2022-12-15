@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent">
@@ -12,30 +13,17 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/topview_dialog_buy_premium"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            android:translationZ="@dimen/_20sdp"
-            android:scaleType="centerCrop"
             android:paddingStart="-10dp"
             android:paddingEnd="-10dp"
-            android:paddingBottom="@dimen/_10sdp"/>
-
-        <!--<androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_70sdp"
-            android:layout_marginTop="70dp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/topview_dialog_buy_premium"
+            android:translationZ="@dimen/_20sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            app:cardCornerRadius="@dimen/_30sdp">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </androidx.cardview.widget.CardView>-->
+            tools:ignore="MissingConstraints" />
+
 
         <View
             android:layout_width="match_parent"
@@ -51,20 +39,72 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-70dp"
+            android:background="@color/color_C9D8FF"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            tools:ignore="MissingConstraints"
-            android:background="@color/color_C9D8FF"
-            android:orientation="vertical">
+            tools:ignore="MissingConstraints">
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="70dp"/>
+                android:layout_height="70dp" />
 
             <include
                 android:id="@+id/pr_wa"
-                layout="@layout/layout_pre_wa"/>
+                layout="@layout/layout_pre_wa" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp" />
+
+            <include
+                android:id="@+id/pr_wab"
+                layout="@layout/layout_pre_wab" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp" />
+
+            <include
+                android:id="@+id/pr_wa_wab"
+                layout="@layout/layout_pre_wa_wab" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/color_2156DF"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                app:cardCornerRadius="@dimen/_44sdp"
+                android:layout_marginStart="@dimen/_34sdp"
+                android:layout_marginEnd="@dimen/_34sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    style="@style/styleButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/text_ok"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_18sdp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bought already"
+                android:textColor="@color/color_9199B0"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textAlignment="center"
+                android:paddingBottom="@dimen/_20sdp"/>
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

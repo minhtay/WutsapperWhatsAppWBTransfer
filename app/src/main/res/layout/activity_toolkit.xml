@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp" />
+
+        <include
+            android:id="@+id/tk1"
+            layout="@layout/layout_status_saver" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp" />
+
+        <include
+            android:id="@+id/tk2"
+            layout="@layout/layout_deleted_recover" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp" />
+
+        <include
+            android:id="@+id/tk3"
+            layout="@layout/layout_wa_web" />
+
+
+    </LinearLayout>
+</layout>

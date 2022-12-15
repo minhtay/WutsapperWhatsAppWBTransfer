@@ -39,7 +39,7 @@
     <string name="stateprogress_connect">Connect</string>
     <string name="stateprogress_transfer">Transfer</string>
     <string name="stateprogress_WA_login">WA login</string>
-    <string name="stateprogress_restore">Restore</string>
+    <string name="stateprogress_subscribe">Subscribe</string>
     <string name="invalid_country_code">invalid country code</string>
     <string name="choose_a_country">Choose a country</string>
     <string name="premium">Premium</string>
@@ -55,6 +55,20 @@
     <string name="signIn">Sign in</string>
     <string name="yearly">Yearly</string>
     <string name="wa_wab">WhatApp+ WA Business</string>
+    <string name="status_saver">Status Saver</string>
+    <string name="deleted_recover">WhatsApp Deleted recover</string>
+    <string name="wa_web">WhatsApp Web</string>
+    <string name="image">Image</string>
+    <string name="video">Video</string>
+    <string name="statusSaver_txt1">How to save image status?</string>
+    <string name="statusSaver_step1">Open WhatsApp status</string>
+    <string name="statusSaver_step2">View status from WhatsApp</string>
+    <string name="statusSaver_step3">Open Wutsapper to download</string>
+    <string name="open_whatsapp">Open WhatsApp</string>
+    <string name="Let_go">Let’s go</string>
+    <string name="start">Start</string>
+    <string name="deleted_wa_txt">Wutsapper help you recover the WhatsApp messages which are deleted by sender side, from now on you won’t miss any important messages.</string>
+    <string name="wa_web_txt">WhatsApp Web helps you log in to multiple WA accounts on the same device or the same account on multiple devices.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
