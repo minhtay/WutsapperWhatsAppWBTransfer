@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.wondershare.wutsapper.transfer.feature.backup.model.Step2DataRCV" />
+
+        <import type="androidx.appcompat.content.res.AppCompatResources" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/background_item_step2">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/_53sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:scaleType="centerCrop"
+            app:imageResource="@{data.icon}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/backgound_checkbox"
+            android:button="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2sp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{data.name}"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dataCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@{data.dataAmount}"
+                android:textAlignment="center"
+                android:textSize="@dimen/_8sdp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

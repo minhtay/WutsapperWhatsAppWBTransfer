@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_5sdp">
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:progress="100"
+        android:progressTint="#F1F4FB"
+        app:layout_constraintEnd_toEndOf="@+id/img4"
+        app:layout_constraintStart_toStartOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_34sdp"
+        android:background="@drawable/bg_stateprogressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progressBar2"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stateprogressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
+        app:layout_constraintEnd_toStartOf="@+id/img3"
+        app:layout_constraintStart_toEndOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="@+id/progressBar2"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stateprogressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
+        app:layout_constraintEnd_toStartOf="@+id/img4"
+        app:layout_constraintStart_toEndOf="@+id/img2"
+        app:layout_constraintTop_toTopOf="@+id/progressBar2"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_34sdp"
+        android:background="@drawable/bg_stateprogressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="@+id/progressBar2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stateprogress_connect"
+        android:textColor="@color/color_9199B0"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintEnd_toEndOf="@+id/img1"
+        app:layout_constraintStart_toStartOf="@+id/img1"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stateprogress_transfer"
+        android:textColor="@color/color_9199B0"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintEnd_toEndOf="@+id/img2"
+        app:layout_constraintStart_toStartOf="@+id/img2"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stateprogress_WA_login"
+        android:textColor="@color/color_9199B0"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintEnd_toEndOf="@+id/img3"
+        app:layout_constraintStart_toStartOf="@+id/img3"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stateprogress_restore"
+        android:textColor="@color/color_9199B0"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintEnd_toEndOf="@+id/img4"
+        app:layout_constraintStart_toStartOf="@+id/img4"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Wutsapper-WhatsApp&amp;WB Transfer</string>
+
+    <!--App string-->
+    <string name="text_toolbar_home">Wutsapper</string>
+    <string name="choose_transfer_app">Choose transfer App:</string>
+    <string name="android_to_iphone">Android to iPhone</string>
+    <string name="iphone_to_android">iPhone to Android</string>
+    <string name="id_whatsapp">WhatsApp</string>
+    <string name="id_wa_business">WA Business</string>
+    <string name="text_reBackup">Re-backup</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_low_Battery">To ensure successful data transfer, please keep your phone&amp;s battery level above 50%.</string>
+    <string name="text_ok">Ok</string>
+    <string name="text_toolbar_guide_backup">Backup WhatsApp</string>
+    <string name="backup">Backup</string>
+    <string name="text_guide_backup">Please follow the below steps to backup your WhatsApp data.</string>
+    <string name="text_backup_step1">Please enter your mobile phone number used for WhatsApp backup</string>
+    <string name="defaut_coutryPhone">United States(USA)</string>
+    <string name="defaut_coutryCode">+1</string>
+    <string name="confirm_number">Confirm that the phone number can receive the verification code.</string>
+    <string name="hint_enterPhone">Phone number</string>
+    <string name="unselect_All">Unselect All</string>
+    <string name="other_Database">Other Database</string>
+    <string name="contracts">CONTACTS</string>
+    <string name="txt_new">NEW</string>
+    <string name="whatsApp_Contacts">WhatsApp Contacts</string>
+    <string name="note">Notes:</string>
+    <string name="txt_note">The developer of Wutsapper does not save any of your data, and all backed-up WhatsApp data is only used in WhatsApp transfer.</string>
+    <string name="tranfer_options">Two options to complete WhatsApp transfer:</string>
+    <string name="phoneToPhone">Phone to Phone</string>
+    <string name="guide_phoneToPhone">Use USB-C to Lightning cable to transfer WhatsApp with one </string>
+    <string name="no_usbC">No USB-C</string>
+    <string name="guide_noUsbC">Complete WhatsApp transfer with the desktop toolkit.</string>
+    <string name="next">Next</string>
+    <string name="phone_number">Phone number</string>
+    <string name="search">Search</string>
+    <string name="country_code">Choose country/region</string>
+    <string name="stateprogress_connect">Connect</string>
+    <string name="stateprogress_transfer">Transfer</string>
+    <string name="stateprogress_WA_login">WA login</string>
+    <string name="stateprogress_restore">Restore</string>
+    <string name="invalid_country_code">invalid country code</string>
+    <string name="choose_a_country">Choose a country</string>
+    <string name="premium">Premium</string>
+    <string name="premium1">Transfer all WhatsApp data</string>
+    <string name="video_tutorial">Video Tutorial</string>
+    <string name="FAQs">FAQs</string>
+    <string name="Feedback">Feedback</string>
+    <string name="Language">Language</string>
+    <string name="About">About</string>
+    <string name="toolkit">WhatsApp Toolkit</string>
+    <string name="txt_buyPremium">If you already purchased Wutsapper on the official website, please "Sign in" directly; if you have not bought Wutsapper, please click "Buy Now" first.</string>
+    <string name="buyNow">Buy Now</string>
+    <string name="signIn">Sign in</string>
+    <string name="yearly">Yearly</string>
+    <string name="wa_wab">WhatApp+ WA Business</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

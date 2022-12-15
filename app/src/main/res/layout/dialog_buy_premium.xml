@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/topview_dialog_buy_premium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:translationZ="@dimen/_20sdp"
+            android:scaleType="centerCrop"
+            android:paddingStart="-10dp"
+            android:paddingEnd="-10dp"
+            android:paddingBottom="@dimen/_10sdp"/>
+
+        <!--<androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            app:cardCornerRadius="@dimen/_30sdp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:background="@drawable/bg_buy_pre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="MissingConstraints"
+            android:background="@color/color_C9D8FF"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="70dp"/>
+
+            <include
+                android:id="@+id/pr_wa"
+                layout="@layout/layout_pre_wa"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appearance_app_icons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingEnd="@dimen/_15sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    tools:ignore="RtlSymmetry">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:padding="@dimen/_3sdp"
+        android:tint="?android:attr/textColorPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.basic.common.widget.LsTextView
+        android:id="@+id/titleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:text="Hello 1"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@+id/summaryView"
+        app:layout_constraintEnd_toStartOf="@+id/widgetFrame"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.basic.common.widget.LsTextView
+        android:id="@+id/summaryView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:text="Hello 2"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/widgetFrame"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toBottomOf="@id/titleView" />
+
+    <FrameLayout
+        android:id="@+id/widgetFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

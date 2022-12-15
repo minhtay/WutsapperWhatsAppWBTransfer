@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.wondershare.wutsapper.transfer.feature.backup.model.CoutryPhoneDataRCV" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.country}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@{data.code}"
+            android:textColor="@color/color_656975"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

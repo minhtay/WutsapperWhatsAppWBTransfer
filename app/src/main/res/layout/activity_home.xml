@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.wondershare.wutsapper.transfer.feature.home.HomeViewmodel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/layout_toolbar" />
+
+        <ImageView
+            android:id="@+id/img_step1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/background_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    style="@style/choose_transfer_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:text="@string/choose_transfer_app" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_choose_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/color_F5F5F5"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    tools:targetApi="p">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_app"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_whatsapp_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/tv_selected_app"
+                            style="@style/choose_app"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/id_whatsapp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/img_app"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/img_dropOrDown"
+                            android:layout_width="8dp"
+                            android:layout_height="9dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_dropdown_menu_home"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tv_selected_app"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/tranfer"
+                layout="@layout/layout_tranfer" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_12sdp" />
+
+            <include
+                android:id="@+id/tranfer2"
+                layout="@layout/layout_tranfer2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_tranfer_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="@+id/img_step1"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:id="@+id/item_whatsap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_menu_whatsapp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_whatsapp_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/tv_menu_whapsap"
+                            style="@style/choose_app"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/id_whatsapp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/img_app"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/color_F5F5F5"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"/>
+
+                    <LinearLayout
+                        android:id="@+id/item_wb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/img_menu_wa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_whatsapp_24" />
+
+                        <TextView
+                            android:id="@+id/tv_menu_wb"
+                            style="@style/choose_app"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/id_wa_business" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

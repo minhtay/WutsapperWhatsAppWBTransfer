@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--App color-->
+    <color name="color_7DBC2D">#7DBC2D</color>
+    <color name="color_2156DF">#2156DF</color>
+    <color name="color_F5F5F5">#F5F5F5</color>
+    <color name="color_9DA0A6">#9DA0A6</color>
+    <color name="color_40B6BACB">#40B6BACB</color>
+    <color name="color_4D9199B0">#4D9199B0</color>
+    <color name="color_9199B0">#9199B0</color>
+    <color name="color_269FD126">#26919FD1</color>
+    <color name="color_03C4C4C4">#C4C4C4</color>
+    <color name="color_ACB1BE">#ACB1BE</color>
+    <color name="color_267DFF">#267DFF</color>
+    <color name="color_4DFFFFFF">#4DFFFFFF</color>
+    <color name="color_656975">#656975</color>
+    <color name="color_1A1B1F">#1A1B1F</color>
+    <color name="color_F7DA84">#F7DA84</color>
+    <color name="color_E4E4E4">#E4E4E4</color>
+    <color name="color_C9D8FF">#C9D8FF</color>
+    <color name="color_EDB663">#EDB663</color>
+
+    <color name="trans">@android:color/transparent</color>
+
+</resources>
