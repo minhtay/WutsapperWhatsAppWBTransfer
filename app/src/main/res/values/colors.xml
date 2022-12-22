@@ -31,6 +31,8 @@
     <color name="color_2A2A2F">#2A2A2F</color>
     <color name="color_339199B0">#339199B0</color>
     <color name="color_9497D6">#9497D6</color>
+    <color name="color_0038FF">#0038FF</color>
+    <color name="color_F3F7FF">#F3F7FF</color>
 
     <color name="trans">@android:color/transparent</color>
 

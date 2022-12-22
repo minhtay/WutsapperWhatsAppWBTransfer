@@ -14,7 +14,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_10sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,33 +85,36 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:orientation="horizontal"
                         android:paddingTop="@dimen/_5sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        android:layout_gravity="center">
+                        android:paddingBottom="@dimen/_5sdp">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="+"
+                            android:layout_gravity="center"
                             android:layout_marginStart="@dimen/_10sdp"
-                            android:textStyle="bold"
+                            android:text="+"
                             android:textColor="@color/black"
-                            android:layout_gravity="center"/>
+                            android:textStyle="bold" />
 
 
                         <EditText
                             android:id="@+id/code"
-                            android:text="@={viewmodel._codePhone}"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@color/trans"
+                            android:hint=" "
                             android:inputType="number"
-                            android:paddingEnd="@dimen/_10sdp"
                             android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:singleLine="true"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_14sdp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold"
+                            android:maxLength="5"/>
                     </LinearLayout>
 
                     <View
@@ -122,7 +126,6 @@
 
                     <EditText
                         android:id="@+id/phoneNumber"
-                        android:text="@={viewmodel._phoneNumber}"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -133,9 +136,11 @@
                         android:hint="@string/hint_enterPhone"
                         android:inputType="number"
                         android:singleLine="true"
+                        android:text="@={viewmodel._phoneNumber}"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_14sdp"
-                        tools:ignore="Deprecated" />
+                        tools:ignore="Deprecated"
+                        android:maxLength="20"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

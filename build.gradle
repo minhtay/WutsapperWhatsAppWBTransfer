@@ -43,6 +43,9 @@ buildscript{
         //dots indicator
         dotsindicator_version = "4.3"
 
+        //lottie animotion
+        lottieVersion = "3.4.0"
+
     }
 }
 

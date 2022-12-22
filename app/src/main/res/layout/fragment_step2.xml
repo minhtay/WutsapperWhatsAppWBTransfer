@@ -28,7 +28,10 @@
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:orientation="horizontal">
 
+<!-- view all
+
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/spinner_select"
                     android:layout_width="@dimen/_90sdp"
                     android:layout_height="@dimen/_25sdp"
                     android:outlineSpotShadowColor="@color/trans"
@@ -41,13 +44,15 @@
                         android:background="@color/color_269FD126">
 
                         <TextView
-                            style="@style/txtStyle2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="@dimen/_18sdp"
                             android:background="@color/trans"
-                            android:text="All" />
+                            android:text="All"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="@color/black"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -63,19 +68,22 @@
                             android:src="@drawable/ic_dropdown_menu_home" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+-->
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="@dimen/_20sdp"
                     android:layout_weight="1" />
 
                 <TextView
-                    style="@style/txtStyle4"
+                    android:id="@+id/unselectAll"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
                     android:layout_gravity="center"
                     android:text="@string/unselect_All"
-                    android:textColor="@color/color_267DFF" />
+                    android:textColor="@color/color_267DFF"
+                    android:textSize="@dimen/_14sdp"
+                    android:gravity="center"/>
 
             </LinearLayout>
 
@@ -171,7 +179,7 @@
 
 
                     <androidx.appcompat.widget.AppCompatCheckBox
-                        android:id="@+id/checkbox"
+                        android:id="@+id/checkbox_contacts"
                         android:layout_width="@dimen/_17sdp"
                         android:layout_height="@dimen/_17sdp"
                         android:layout_gravity="center"

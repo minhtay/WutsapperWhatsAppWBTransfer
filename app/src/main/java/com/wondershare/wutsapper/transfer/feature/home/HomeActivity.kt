@@ -85,7 +85,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding, HomeViewmodel>() {
             UserActivity.startActivity(this)
         }
 
-
+        binding.tranfer2.view.setOnClickListener {
+            BackupActivity.startActivity(this, intent, option = 2)
+        }
     }
 
     private fun dialogRequireBackup(): Dialog {
@@ -127,7 +129,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding, HomeViewmodel>() {
                 showDialog(dialogLowBattery())
                 hideDialog(dialog)
             } else {
-                BackupActivity.startActivity(this)
+                BackupActivity.startActivity(this, intent, option = 1)
                 hideDialog(dialog)
             }
         }
@@ -151,7 +153,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding, HomeViewmodel>() {
         dialogBinding.btnOk.setOnClickListener {
             when (viewmodel.paramester.value) {
                 1 -> GuideBackupActivity.startActivity(this)
-                2 -> BackupActivity.startActivity(this)
+                2 -> BackupActivity.startActivity(this, intent, option = 1)
             }
             hideDialog(dialog)
         }

@@ -21,6 +21,7 @@
     <string name="confirm_number">Confirm that the phone number can receive the verification code.</string>
     <string name="hint_enterPhone">Phone number</string>
     <string name="unselect_All">Unselect All</string>
+    <string name="select_All">Select All</string>
     <string name="other_Database">Other Database</string>
     <string name="contracts">CONTACTS</string>
     <string name="txt_new">NEW</string>
@@ -57,9 +58,18 @@
     <string name="wa_wab">WhatApp+ WA Business</string>
     <string name="status_saver">Status Saver</string>
     <string name="deleted_recover">WhatsApp Deleted recover</string>
+    <string name="whatsapp_deleted">WhatsApp Deleted</string>
     <string name="wa_web">WhatsApp Web</string>
     <string name="image">Image</string>
     <string name="video">Video</string>
+    <string name="all">All</string>
+    <string name="text">Text</string>
+    <string name="audios">Audios</string>
+    <string name="files">Files</string>
+    <string name="emoji">Emoji</string>
+    <string name="locations">Locations</string>
+    <string name="gifs">Gifs</string>
+    <string name="voices">Voices</string>
     <string name="statusSaver_txt1">How to save image status?</string>
     <string name="statusSaver_step1">Open WhatsApp status</string>
     <string name="statusSaver_step2">View status from WhatsApp</string>
@@ -69,6 +79,18 @@
     <string name="start">Start</string>
     <string name="deleted_wa_txt">Wutsapper help you recover the WhatsApp messages which are deleted by sender side, from now on you won’t miss any important messages.</string>
     <string name="wa_web_txt">WhatsApp Web helps you log in to multiple WA accounts on the same device or the same account on multiple devices.</string>
+    <string name="device_connection">Device connection</string>
+    <string name="device_connection_text">Two options to complete WhatsApp transfer:</string>
+    <string name="share_file">Share file</string>
+    <string name="share_file_text">Select the form to share files</string>
+    <string name="receive_file_bluetooth">Receive file with bluetooth</string>
+    <string name="receive_file_bluetooth_txt1">If it’s the first time connect please confirm the code to procced to send and receive files.</string>
+    <string name="receive_file_bluetooth_txt2">Tap the device name to connect</string>
+    <string name="waiting_sender_txt1">Waiting for Sender...</string>
+    <string name="waiting_sender_txt2">Connect to: Unknowssid</string>
+    <string name="selected_files_txt1">Selected files</string>
+    <string name="selected_files_txt2">Remove all</string>
+    <string name="wa_data">WhasApp Data</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

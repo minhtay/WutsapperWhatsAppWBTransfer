@@ -66,10 +66,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_5sdp" />
 
+
             <include
                 android:id="@+id/pr_wa_wab"
                 layout="@layout/layout_pre_wa_wab" />
-
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/btn_ok"

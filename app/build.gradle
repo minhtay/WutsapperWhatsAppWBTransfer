@@ -115,5 +115,8 @@ dependencies {
     // StateProgressBar
     implementation "com.kofigyan.stateprogressbar:stateprogressbar:$stateprogressbar_version"
 
+    // lottie animotion
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
 
 }

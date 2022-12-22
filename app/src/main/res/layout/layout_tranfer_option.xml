@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/view"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_165sdp"
+    android:layout_height="@dimen/_175sdp"
     android:layout_margin="@dimen/_20sdp"
     app:cardCornerRadius="@dimen/_20sdp">
 
@@ -55,7 +55,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_move_tranfer" />
+                    android:src="@drawable/ic_move_tranfer"
+                    android:paddingEnd="@dimen/_10sdp"/>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 

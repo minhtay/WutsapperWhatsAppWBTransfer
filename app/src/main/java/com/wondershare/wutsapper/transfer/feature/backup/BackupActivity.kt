@@ -5,32 +5,36 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.result.contract.ActivityResultContracts.*
+import android.view.WindowManager
+import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.wondershare.wutsapper.transfer.BR
 import com.wondershare.wutsapper.transfer.R
 import com.wondershare.wutsapper.transfer.databinding.ActivityBackupBinding
+import com.wondershare.wutsapper.transfer.feature.backup.adapter.BackupAdapterViewPager
+import com.wondershare.wutsapper.transfer.feature.backup.adapter.BackupAdapterViewpagerOption2
 import com.wondershare.wutsapper.transfer.feature.backup.model.CoutryPhoneDataRCV
+import com.wondershare.wutsapper.transfer.feature.backup.step.DeviceConnectionFragment
 import com.wondershare.wutsapper.transfer.feature.backup.step.Step1Fragment
 import com.wondershare.wutsapper.transfer.feature.backup.step.Step2Fragment
 import com.wondershare.wutsapper.transfer.feature.base.BaseActivity
 import com.wondershare.wutsapper.transfer.feature.user.UserActivity
-import kotlinx.android.synthetic.main.activity_coutry_phone.*
 
-class BackupActivity : BaseActivity<ActivityBackupBinding, BackupViewmodel>(), BackupNavigator {
-
-    val TAG = "BackupActivityResuft"
+class BackupActivity : BaseActivity<ActivityBackupBinding, BackupViewmodel>() {
 
     companion object {
-        fun startActivity(context: Context) {
+        fun startActivity(context: Context, currentIntent: Intent, option: Int) {
             val intent = Intent(context, BackupActivity::class.java)
+            val bundle = Bundle()
+            bundle.putSerializable("option", option)
+            intent.putExtras(bundle)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(intent)
         }
     }
 
-    private lateinit var binding: ActivityBackupBinding
+    lateinit var binding: ActivityBackupBinding
     private lateinit var viewmodel: BackupViewmodel
 
     val coutryPhoneActivity =
@@ -41,7 +45,6 @@ class BackupActivity : BaseActivity<ActivityBackupBinding, BackupViewmodel>(), B
                     val data = bundel.extras!!.getSerializable("results") as CoutryPhoneDataRCV
                     viewmodel.coutryPhone.postValue(data.country)
                     viewmodel._codePhone.postValue(data.code)
-                    Log.d(TAG, ": ")
                 }
             }
 
@@ -59,10 +62,11 @@ class BackupActivity : BaseActivity<ActivityBackupBinding, BackupViewmodel>(), B
         this.binding = viewDataBinding!!
         this.binding.lifecycleOwner = this
         viewmodel = mViewmodel
+
+
         initView()
         actionView()
 
-        //window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
     }
 
     private fun actionView() {
@@ -72,7 +76,24 @@ class BackupActivity : BaseActivity<ActivityBackupBinding, BackupViewmodel>(), B
     }
 
     private fun initView() {
-        addFragment(Step1Fragment(), binding.fragmentView.id, "Step1")
+
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING)
+
+
+
+        when (intent.getSerializableExtra("option")) {
+            1 -> {
+                val pagerAdapter = BackupAdapterViewPager(this)
+                binding.fragmentView.adapter = pagerAdapter
+                binding.fragmentView.isUserInputEnabled = false
+            }
+
+            2 -> {
+                val pagerAdapter = BackupAdapterViewpagerOption2(this)
+                binding.fragmentView.adapter = pagerAdapter
+                binding.fragmentView.isUserInputEnabled = false
+            }
+        }
 
         binding.root.setOnClickListener { hideKeyboard() }
 
@@ -155,21 +176,15 @@ class BackupActivity : BaseActivity<ActivityBackupBinding, BackupViewmodel>(), B
 
     }
 
-    override fun navigateToScreen(Tag: Int) {
-        addFragment(Step2Fragment(), binding.fragmentView.id, "Step2")
-    }
-
     override fun onBackPressed() {
         when (viewmodel.backstack.value) {
             1 -> finish()
             2 -> {
-                onBackstackFragment()
+                binding.fragmentView.currentItem = 0
                 viewmodel.statebar.postValue(1)
+                viewmodel.nameToolbar.postValue(resources.getString(R.string.phone_number))
             }
-            3 -> {
-                onBackstackFragment()
-                viewmodel.statebar.postValue(2)
-            }
+
 
         }
     }

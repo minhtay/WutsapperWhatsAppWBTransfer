@@ -8,7 +8,7 @@ import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.wondershare.wutsapper.transfer.R
 import com.wondershare.wutsapper.transfer.databinding.ActivityToolkitBinding
-import com.wondershare.wutsapper.transfer.feature.user.deleted.DeletedActivity
+import com.wondershare.wutsapper.transfer.feature.user.deleted_recover.DeletedRecoverActivity
 import com.wondershare.wutsapper.transfer.feature.user.status_saver.StatusSaverActivity
 import com.wondershare.wutsapper.transfer.feature.user.whatsapp_wep.WAWebActivity
 
@@ -37,7 +37,7 @@ class ToolkitActivity : AppCompatActivity() {
         }
 
         binding.tk2.view2.setOnClickListener {
-            DeletedActivity.startActivity(this)
+            DeletedRecoverActivity.startActivity(this)
         }
 
         binding.tk3.view3.setOnClickListener {

@@ -17,19 +17,21 @@
         app:layout_constraintTop_toTopOf="@+id/cardView"
         tools:ignore="MissingConstraints" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_85sdp"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_5sdp"
         app:cardCornerRadius="@dimen/_18sdp"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/trans">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -46,11 +48,11 @@
                 android:layout_height="@dimen/_20sdp"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_checkbox_buy_pre"
+                android:button="@null"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints"
-                android:background="@drawable/bg_checkbox_buy_pre"
-                android:button="@null" />
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:layout_width="@dimen/_60sdp"
@@ -75,18 +77,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_5sdp"
                     android:text="@string/wa_wab"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp"
-                    android:textStyle="bold"
-                    android:paddingBottom="@dimen/_5sdp"/>
+                    android:textStyle="bold" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
                     app:cardBackgroundColor="@color/color_C9D8FF"
-                    app:cardCornerRadius="@dimen/_49sdp">
+                    app:cardCornerRadius="@dimen/_49sdp"
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -127,5 +130,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
