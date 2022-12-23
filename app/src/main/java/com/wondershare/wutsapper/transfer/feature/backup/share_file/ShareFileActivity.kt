@@ -3,6 +3,7 @@ package com.wondershare.wutsapper.transfer.feature.backup.share_file
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import com.wondershare.wutsapper.transfer.R
 import android.view.animation.AnimationSet
 import android.view.animation.RotateAnimation
@@ -32,6 +33,7 @@ class ShareFileActivity : AppCompatActivity() {
         binding.toolbar.btnBack.setOnClickListener { onBackPressed() }
 
         binding.toolbar.txtToolbar.text = resources.getString(R.string.share_file)
+        binding.toolbar.btnToolbar.visibility = View.GONE
 
 
         binding.network.setOnClickListener {

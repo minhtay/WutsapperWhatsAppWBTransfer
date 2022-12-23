@@ -5,9 +5,15 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.uber.autodispose.android.lifecycle.scope
+import com.uber.autodispose.autoDispose
 import com.wondershare.wutsapper.transfer.R
 import com.wondershare.wutsapper.transfer.databinding.ActivityWaitingSenderBinding
 import com.wondershare.wutsapper.transfer.feature.backup.select_file.SelectFileActivity
+import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import java.util.concurrent.TimeUnit
+
 
 class WaitingSenderActivity : AppCompatActivity() {
 
@@ -20,26 +26,23 @@ class WaitingSenderActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityWaitingSenderBinding
 
-    private val thread: Thread = object : Thread() {
-        override fun run() {
-            try {
-                sleep(50000)
-                SelectFileActivity.startActivity(this@WaitingSenderActivity)
-            } catch (e: InterruptedException) {
-                e.printStackTrace()
-            }
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_waiting_sender)
         binding.executePendingBindings()
-        thread.start()
+
+
+        Observable.timer(5, TimeUnit.SECONDS)
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(AndroidSchedulers.mainThread())
+            .autoDispose(scope())
+            .subscribe {
+                SelectFileActivity.startActivity(this@WaitingSenderActivity)
+                finish()
+            }
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
-        thread.isInterrupted
     }
 }

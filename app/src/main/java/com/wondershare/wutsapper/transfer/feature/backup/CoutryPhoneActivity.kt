@@ -45,13 +45,18 @@ class CoutryPhoneActivity : BaseActivity<ActivityCoutryPhoneBinding, BaseViewmod
         }
         binding.edtSearchCoutry.addTextChangedListener { textChange ->
             if (textChange != null) {
-                Log.d("TAG", "actionView: ")
+                val data = ArrayList<CoutryPhoneDataRCV>()
                 if (textChange.isNotEmpty()) {
-                    val data = Utils.loadJSONFromAsset(this)!!.filter {
+                    val data1 = Utils.loadJSONFromAsset(this)!!.filter {
                         it.country.startsWith(textChange.toString(),true)
                     } as ArrayList<CoutryPhoneDataRCV>
+                    val data2 = Utils.loadJSONFromAsset(this)!!.filter {
+                        it.code.startsWith(textChange.toString(),true)
+                    } as ArrayList<CoutryPhoneDataRCV>
+                    data.addAll(data1)
+                    data.addAll(data2)
                     Log.d("TAG", "actionView: ")
-                    val adapter = CoutryPhoneAdapterRCV(data as ArrayList<CoutryPhoneDataRCV>) { data ->
+                    val adapter = CoutryPhoneAdapterRCV(data) { data ->
                         changeCoutryPhone(data)
                     }
                     binding.rcvCoutryPhone.adapter = adapter

@@ -10,7 +10,8 @@
         app:strokeColor="#1A347DFF"
         app:strokeWidth="@dimen/_2sdp"
         android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp">
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardElevation="0dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -96,7 +97,8 @@
                     app:cardCornerRadius="@dimen/_18sdp"
                     app:cardElevation="0dp"
                     app:strokeColor="#347DFF"
-                    app:strokeWidth="@dimen/_1sdp">
+                    app:strokeWidth="@dimen/_1sdp"
+                    app:cardBackgroundColor="@color/white">
 
                     <TextView
                         android:layout_width="wrap_content"

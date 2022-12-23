@@ -147,7 +147,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_weight="1"
-                app:cardCornerRadius="@dimen/_10sdp">
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/white">
 
                 <LinearLayout
                     android:id="@+id/item_whatsap"

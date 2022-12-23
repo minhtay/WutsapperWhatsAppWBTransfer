@@ -12,7 +12,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:outlineSpotShadowColor="@color/trans">
+            android:outlineSpotShadowColor="@color/trans"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -55,19 +56,20 @@
                     app:cardCornerRadius="@dimen/_80sdp"
                     app:cardElevation="0dp"
                     app:strokeColor="@color/color_339199B0"
-                    app:strokeWidth="@dimen/_1sdp">
+                    app:strokeWidth="@dimen/_1sdp"
+                    app:cardBackgroundColor="@color/white">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingStart="@dimen/_10sdp"
                         android:paddingTop="@dimen/_4sdp"
-                        android:paddingEnd="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_10sdp"
                         android:paddingBottom="@dimen/_4sdp">
 
                         <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_20sdp"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
                             android:src="@drawable/ic_whatsapp_24" />
 
                         <ImageView

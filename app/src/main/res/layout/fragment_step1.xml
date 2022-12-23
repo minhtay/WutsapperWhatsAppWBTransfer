@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:layout_marginTop="@dimen/_10sdp">
+        android:layout_marginTop="@dimen/_15sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_52sdp"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 app:cardBackgroundColor="@color/color_269FD126"
                 app:cardCornerRadius="@dimen/_14sdp"
@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_52sdp"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 app:cardBackgroundColor="@color/color_269FD126"
                 app:cardCornerRadius="@dimen/_14sdp"
@@ -140,7 +140,8 @@
                         android:textColor="@color/black"
                         android:textSize="@dimen/_14sdp"
                         tools:ignore="Deprecated"
-                        android:maxLength="20"/>
+                        android:maxLength="20"
+                        android:textColorHint="@color/color_ACB1BE"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -150,7 +151,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:text="@string/confirm_number" />
 

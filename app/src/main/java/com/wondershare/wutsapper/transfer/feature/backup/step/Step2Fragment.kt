@@ -1,7 +1,6 @@
 package com.wondershare.wutsapper.transfer.feature.backup.step
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.wondershare.wutsapper.transfer.BR
@@ -12,6 +11,7 @@ import com.wondershare.wutsapper.transfer.feature.backup.BackupViewmodel
 import com.wondershare.wutsapper.transfer.feature.backup.adapter.Step2AdapterRCV
 import com.wondershare.wutsapper.transfer.feature.backup.model.Step2DataRCV
 import com.wondershare.wutsapper.transfer.feature.base.BaseFragment
+
 
 class Step2Fragment : BaseFragment<FragmentStep2Binding, BackupViewmodel>() {
 
@@ -57,7 +57,48 @@ class Step2Fragment : BaseFragment<FragmentStep2Binding, BackupViewmodel>() {
         binding.rcvStep2.suppressLayout(true)
 
         itemClickListener(adapter)
+
+        viewmodel.spinnerCheck.observe(activity) {
+            if (it) {
+                binding.dropMenu.visibility = View.VISIBLE
+                binding.imgDropOrDown.setImageResource(R.drawable.ic_dropup_menu_home)
+            } else {
+                binding.dropMenu.visibility = View.GONE
+                binding.imgDropOrDown.setImageResource(R.drawable.ic_dropdown_menu_home)
+
+            }
+        }
+
+        viewmodel.spinnercode.observe(activity) {
+            clearCheck()
+            when (it) {
+                1 -> {
+                    binding.img1.visibility = View.VISIBLE
+                    binding.spinnerResulf.text = resources.getString(R.string.all)
+                }
+                2 -> {
+                    binding.img2.visibility = View.VISIBLE
+                    binding.spinnerResulf.text = resources.getString(R.string.spinner_step2_txt1)
+                }
+                3 -> {
+                    binding.img3.visibility = View.VISIBLE
+                    binding.spinnerResulf.text = resources.getString(R.string.spinner_step2_txt2)
+                }
+                4 -> {
+                    binding.img4.visibility = View.VISIBLE
+                    binding.spinnerResulf.text = resources.getString(R.string.spinner_step2_txt3)
+                }
+            }
+        }
     }
+
+    private fun clearCheck() {
+        binding.img1.visibility = View.GONE
+        binding.img2.visibility = View.GONE
+        binding.img3.visibility = View.GONE
+        binding.img4.visibility = View.GONE
+    }
+
 
     private fun actionView() {
         binding.unselectAll.setOnClickListener {
@@ -74,6 +115,38 @@ class Step2Fragment : BaseFragment<FragmentStep2Binding, BackupViewmodel>() {
                 itemClickListener(adapter)
                 binding.unselectAll.text = resources.getString(R.string.unselect_All)
             }
+        }
+
+        binding.clickCheckBoxContacts.setOnClickListener {
+            binding.checkboxContacts.isChecked = !binding.checkboxContacts.isChecked
+        }
+
+        binding.spinnerSelect.setOnClickListener {
+            viewmodel.spinnerCheck.postValue(!viewmodel.spinnerCheck.value!!)
+        }
+
+        binding.root.setOnClickListener {
+            if (binding.dropMenu.isShown) {
+                viewmodel.spinnerCheck.postValue(false)
+            }
+        }
+
+
+        binding.item1.setOnClickListener {
+            viewmodel.spinnercode.postValue(1)
+            viewmodel.spinnerCheck.postValue(false)
+        }
+        binding.item2.setOnClickListener {
+            viewmodel.spinnercode.postValue(2)
+            viewmodel.spinnerCheck.postValue(false)
+        }
+        binding.item3.setOnClickListener {
+            viewmodel.spinnercode.postValue(3)
+            viewmodel.spinnerCheck.postValue(false)
+        }
+        binding.item4.setOnClickListener {
+            viewmodel.spinnercode.postValue(4)
+            viewmodel.spinnerCheck.postValue(false)
         }
     }
 
@@ -103,6 +176,15 @@ class Step2Fragment : BaseFragment<FragmentStep2Binding, BackupViewmodel>() {
         arrayList.add(Step2DataRCV(R.drawable.icon_location, "Locations", "1"))
         arrayList.add(Step2DataRCV(R.drawable.icon_gif, "Gifs", "1"))
         arrayList.add(Step2DataRCV(R.drawable.icon_voice, "Voices", "1"))
+        return arrayList
+    }
+
+    private fun arrayStep2Spinner(): ArrayList<String> {
+        val arrayList = ArrayList<String>()
+        arrayList.add("All")
+        arrayList.add("Last 3 years")
+        arrayList.add("Last 1 year")
+        arrayList.add("Last 3 months")
         return arrayList
     }
 

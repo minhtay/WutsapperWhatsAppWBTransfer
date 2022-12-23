@@ -16,6 +16,7 @@ import com.wondershare.wutsapper.transfer.databinding.FragmentStep1Binding
 import com.wondershare.wutsapper.transfer.feature.backup.BackupActivity
 import com.wondershare.wutsapper.transfer.feature.backup.BackupViewmodel
 import com.wondershare.wutsapper.transfer.feature.backup.CoutryPhoneActivity
+import com.wondershare.wutsapper.transfer.feature.base.BaseActivity
 import com.wondershare.wutsapper.transfer.feature.base.BaseFragment
 import com.wondershare.wutsapper.transfer.utils.Utils
 
@@ -54,12 +55,12 @@ class Step1Fragment : BaseFragment<FragmentStep1Binding, BackupViewmodel>() {
         viewmodel.statebar.postValue(1)
 
         viewmodel.coutryPhone.observe(activity) {
-            if (it != ""){
+            if (it != null) {
                 binding.txtcoutry.text = it
             }
         }
-        viewmodel._codePhone.observe(activity){
-            if (it!=""){
+        viewmodel._codePhone.observe(activity) {
+            if (it != null) {
                 binding.code.setText(it)
             }
         }
@@ -69,7 +70,7 @@ class Step1Fragment : BaseFragment<FragmentStep1Binding, BackupViewmodel>() {
     private fun actionView() {
         binding.changeCoutryPhone.setOnClickListener {
             binding.code.removeTextChangedListener(textChanges)
-
+            (baseActivity as BaseActivity).hideKeyboard()
             val intent = Intent(activity, CoutryPhoneActivity::class.java)
             activity.coutryPhoneActivity.launch(intent)
         }
@@ -83,20 +84,24 @@ class Step1Fragment : BaseFragment<FragmentStep1Binding, BackupViewmodel>() {
         }
 
         binding.btnNext.setOnClickListener {
-            if (invalid()){
+            if (invalid()) {
                 activity.binding.fragmentView.currentItem = 1
-            }else Toast.makeText(activity,"Please enter a phone number or select a country  ",Toast.LENGTH_LONG).show()
+            } else Toast.makeText(
+                activity,
+                "Please enter a phone number or select a country  ",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
     private val textChanges by lazy {
-        object: TextWatcher{
+        object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (s!!.isNotEmpty()) {
+                if (s?.isNotEmpty() == true) {
                     val data = Utils.loadJSONFromAsset(activity)!!.singleOrNull {
                         it.code == s.toString()
                     }
@@ -105,13 +110,13 @@ class Step1Fragment : BaseFragment<FragmentStep1Binding, BackupViewmodel>() {
                         viewmodel._codePhone.postValue(data.code)
                         binding.code.clearFocus()
                         binding.phoneNumber.requestFocus()
-                    }else{
+                    } else {
                         viewmodel.coutryPhone.postValue(resources.getString(R.string.invalid_country_code))
-                        viewmodel._codePhone.postValue("")
+                        viewmodel._codePhone.postValue(null)
                     }
                 } else {
                     viewmodel.coutryPhone.postValue(resources.getString(R.string.choose_a_country))
-                    viewmodel._codePhone.postValue("")
+                    viewmodel._codePhone.postValue(null)
                 }
             }
 
@@ -123,6 +128,7 @@ class Step1Fragment : BaseFragment<FragmentStep1Binding, BackupViewmodel>() {
     }
 
     private fun invalid(): Boolean {
-        return !(viewmodel._codePhone.value == "" || viewmodel._phoneNumber.value == null)
+        return !(viewmodel._codePhone.value == null || viewmodel._phoneNumber.value == null|| viewmodel._phoneNumber.value =="")
+        Log.d("TAG", "invalid: ")
     }
 }

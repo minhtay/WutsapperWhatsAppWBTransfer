@@ -48,7 +48,6 @@ class DeviceConnectionFragment : BaseFragment<FragmentDeviceConnectionBinding, B
         }
 
         binding.tranferOption2.view.setOnClickListener {
-            ShareFileActivity.startActivity(activity)
         }
     }
 

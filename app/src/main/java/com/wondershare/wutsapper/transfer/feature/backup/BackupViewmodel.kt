@@ -18,6 +18,7 @@ class BackupViewmodel : BaseViewmodel<BaseNavigator>() {
 
     init {
         spinnerCheck.postValue(false)
+        spinnercode.postValue(1)
         _codePhone.postValue("1")
         coutryPhone.postValue("United States")
     }

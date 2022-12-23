@@ -16,7 +16,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,10 +42,10 @@
                     android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:singleLine="true"
+                    android:text="@string/receive_file_bluetooth"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_18sdp"
-                    android:textStyle="bold"
-                    android:text="@string/receive_file_bluetooth"/>
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -79,6 +80,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="@dimen/_250sdp"
             android:layout_height="@dimen/_250sdp"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="@dimen/_200sdp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -109,6 +111,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="@dimen/_10sdp"
                     android:layout_height="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

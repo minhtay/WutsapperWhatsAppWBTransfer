@@ -20,13 +20,14 @@
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_20sdp"
-            app:cardCornerRadius="@dimen/_300sdp">
+            app:cardCornerRadius="@dimen/_300sdp"
+            app:cardBackgroundColor="@color/color_26919FD1"
+            app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/color_4D9199B0">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="@dimen/_25sdp"
@@ -48,7 +49,8 @@
                     android:background="@color/trans"
                     android:hint="@string/search"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_14sdp"
+                    android:textColorHint="@color/color_9199B0"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

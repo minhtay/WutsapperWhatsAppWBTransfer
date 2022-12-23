@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="@dimen/_5sdp">
+    android:paddingBottom="@dimen/_15sdp">
 
     <ProgressBar
         android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:progress="100"
         android:progressTint="#F1F4FB"
         app:layout_constraintEnd_toEndOf="@+id/img4"
         app:layout_constraintStart_toStartOf="@+id/img1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"/>
 
     <ImageView
         android:id="@+id/img1"
@@ -67,6 +69,7 @@
         android:id="@+id/txt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/stateprogress_WA_login"
         android:textColor="@color/color_9199B0"
         android:textSize="@dimen/_9sdp"
@@ -79,6 +82,7 @@
         android:id="@+id/txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/stateprogress_subscribe"
         android:textColor="@color/color_9199B0"
         android:textSize="@dimen/_9sdp"
@@ -91,6 +95,7 @@
         android:id="@+id/txt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/stateprogress_connect"
         android:textColor="@color/color_9199B0"
         android:textSize="@dimen/_9sdp"
@@ -103,6 +108,7 @@
         android:id="@+id/txt4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="@string/stateprogress_transfer"
         android:textColor="@color/color_9199B0"
         android:textSize="@dimen/_9sdp"
